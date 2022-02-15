@@ -25,3 +25,16 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
     keyInput.value = newKey;
   }
 });
+function verifyPin() {
+  const userPin = document.getElementById("keypad-input").value;
+
+  const systemPin = document.getElementById("pin-input").value;
+
+  if (userPin == systemPin) {
+    document.getElementById("wrong-pin").style.display = "none";
+    document.getElementById("correct-pin").style.display = "block";
+  } else {
+    document.getElementById("wrong-pin").style.display = "block";
+    document.getElementById("correct-pin").style.display = "none";
+  }
+}
